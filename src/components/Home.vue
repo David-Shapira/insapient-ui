@@ -4,32 +4,39 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <div class="carousel carousel-slider z-depth-5" ref="myCarousel">
-              <a class="carousel-item" href="#">
-                <img
-                  src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817143/insapient/home/1.jpg"
-                >
-              </a>
-              <a class="carousel-item" href="#">
-                <img
-                  src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817313/insapient/home/2.jpg"
-                >
-              </a>
-              <a class="carousel-item" href="#">
-                <img
-                  src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817143/insapient/home/3.jpg"
-                >
-              </a>
-              <a class="carousel-item" href="#">
-                <img
-                  src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817313/insapient/home/4.jpg"
-                >
-              </a>
-              <a class="carousel-item" href="#">
-                <img
-                  src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817143/insapient/home/5.jpg"
-                >
-              </a>
+            <div class="swiper-container" ref="swiperContainer">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="responsive-img"
+                    src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817143/insapient/home/1.jpg"
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="responsive-img"
+                    src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817313/insapient/home/2.jpg"
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="responsive-img"
+                    src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817143/insapient/home/3.jpg"
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="responsive-img"
+                    src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817313/insapient/home/4.jpg"
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="responsive-img"
+                    src="https://res.cloudinary.com/dqvimfd8b/image/upload/v1523817143/insapient/home/5.jpg"
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -49,29 +56,26 @@
 </template>
 
 <script>
+import Swiper from "swiper";
 import M from "materialize-css/dist/js/materialize.js";
 
 export default {
   name: "Home",
   data() {
     return {
-      carouselInstance: null,
+      slider: null,
       scrollSpyInstance: null
     };
   },
   mounted() {
-    this.carouselInstance = M.Carousel.init(this.$refs.myCarousel, {
-      fullWidth: true
+    this.slider = new Swiper(this.$refs.swiperContainer, {
+      loop: true,
+      autoplay: {
+        delay: 4000
+      }
     });
     this.scrollSpyInstance = M.ScrollSpy.init(this.$refs.homeRef, {});
-    // this.autoPlay()
   }
-  // methods: {
-  // 	autoPlay() {
-  // 		this.carouselInstance.next()
-  // 		setTimeout(this.autoplay, 4500)
-  // 	}
-  // }
 };
 </script>
 
