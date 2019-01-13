@@ -49,7 +49,4 @@ export default {
   color: #fafafa;
   vertical-align: middle !important;
 }
-.btn-floating {
-  background-color: #616161;
-}
 </style>

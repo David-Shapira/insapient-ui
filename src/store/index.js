@@ -11,7 +11,8 @@ const store = new Vuex.Store({
   state: {
     members: [],
     songs: [],
-    videos: []
+    videos: [],
+    gigs: []
   },
   actions,
   mutations,

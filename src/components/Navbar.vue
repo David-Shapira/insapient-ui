@@ -31,7 +31,7 @@
               <a href="#videos-section">Videos</a>
             </div>
             <div class="col s1">
-              <a href="#media-section">Gigs</a>
+              <a href="#gigs-section">Gigs</a>
             </div>
           </div>
         </div>
@@ -51,7 +51,23 @@
         <a href="#videos-section" v-on:click="closeSideNav()">Videos</a>
       </li>
       <li>
-        <a href="#media-section" v-on:click="closeSideNav()">Gigs</a>
+        <a href="#gigs-section" v-on:click="closeSideNav()">Gigs</a>
+      </li>
+      <li>
+        <div>
+          <a href="https://www.instagram.com/insapient.band" target="_blank">
+            <i class="fab fa-instagram media-icon"></i>
+          </a>
+          <a href="https://www.facebook.com/insapient.band" target="_blank">
+            <i class="fab fa-facebook-f media-icon"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCnscHLfwxs-6kApOiHZMLMQ" target="_blank">
+            <i class="fab fa-youtube media-icon"></i>
+          </a>
+          <a href="https://soundcloud.com/insapient" target="_blank">
+            <i class="fab fa-soundcloud media-icon"></i>
+          </a>
+        </div>
       </li>
     </ul>
   </div>
@@ -97,5 +113,12 @@ nav {
 
 .row .col a {
   font-size: 3vh;
+}
+
+.media-icon {
+  margin: 10px;
+  font-size: 2.5vh;
+  color: #fafafa;
+  /* vertical-align: middle !important; */
 }
 </style>

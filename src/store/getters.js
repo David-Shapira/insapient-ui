@@ -7,6 +7,9 @@ const getters = {
   },
   getVideos: state => {
     return state.videos;
+  },
+  getGigs: state => {
+    return state.gigs;
   }
 };
 

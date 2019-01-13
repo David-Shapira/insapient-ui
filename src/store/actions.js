@@ -24,6 +24,14 @@ const actions = {
     } catch (error) {
       console.log(error);
     }
+  },
+  LOAD_GIGS: async ({ commit }) => {
+    try {
+      const response = await Api().get("gigs");
+      commit("SET_GIGS", { list: response.data.data });
+    } catch (error) {
+      console.log(error);
+    }
   }
 };
 export default actions;
