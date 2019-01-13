@@ -50,9 +50,10 @@ export default {
   -moz-animation: subliminalImage 20s ease infinite;
   animation: subliminalImage 20s ease infinite;
   position: fixed;
+  background-size: cover;
+  background-position: center;
   height: 100%;
   width: 100%;
-  z-index: -1;
 }
 
 @-webkit-keyframes subliminalImage {
