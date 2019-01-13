@@ -6,7 +6,7 @@
         <div class="row">
           <div v-for="member in members" :key="member._id" class="col s12 m4">
             <div class="card grey darken-4">
-              <div class="card-image waves-effect waves-light">
+              <div class="card-image">
                 <img class="activator" :src="member.image">
               </div>
               <div class="card-content">
