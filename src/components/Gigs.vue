@@ -1,7 +1,7 @@
 <template>
   <div class="media">
     <section id="media-section" ref="mediaRef">
-      <h3 class="grey darken-4 grey-text text-lighten-4 z-depth-4">Media</h3>
+      <h3 class="grey darken-4 grey-text text-lighten-4 z-depth-4">Gigs</h3>
       <div class="container">
         <div class="row">
           <div class="col s3">
@@ -63,9 +63,4 @@ export default {
 </script>
 
 <style scoped>
-.media-icon {
-  font-size: 2.5vh;
-  color: #eeeeee;
-  vertical-align: middle !important;
-}
 </style>
