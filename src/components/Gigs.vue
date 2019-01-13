@@ -4,7 +4,7 @@
       <h3 class="grey darken-4 grey-text text-lighten-4 z-depth-4">Gigs</h3>
       <div class="container">
         <div class="row">
-          <div class="col s12 m3" v-for="gig in gigs" :key="gig._id">
+          <div :class="getCardsClass()" v-for="gig in gigs" :key="gig._id">
             <div class="card">
               <div class="card-image">
                 <img :src="gig.image">
@@ -37,8 +37,20 @@ export default {
   name: "gigs",
   data() {
     return {
-      scrollSpyInstance: null
+      scrollSpyInstance: null,
+      cardsClass: ""
     };
+  },
+  methods: {
+    getCardsClass() {
+      const cardsArrangement = {
+        1: "col s12 m4 offset-m4",
+        2: "col s12 m3 offset-m2",
+        3: "col s12 m4",
+        4: "col s12 m3"
+      };
+      return cardsArrangement[this.gigs.length];
+    }
   },
   mounted() {
     this.$store.dispatch("LOAD_GIGS");
